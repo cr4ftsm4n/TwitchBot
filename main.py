@@ -2,6 +2,7 @@ import sys
 import os
 import irc.bot
 import requests
+import gspread
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -73,9 +74,17 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             message = "This is an example bot, replace this text with your schedule text."
             c.privmsg(self.channel, message)
 
+        elif cmd == "报到":
+            message = "了解"
+            c.privmsg(self.channel, message)
+
         # The command was not recognized
         else:
             c.privmsg(self.channel, "Did not understand command: " + cmd)
+
+
+def write_to_google_sheets():
+    pass
 
 
 def main():

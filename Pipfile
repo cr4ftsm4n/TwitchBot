@@ -11,6 +11,7 @@ irc-bot = "*"
 requests = "*"
 irc = "*"
 python-dotenv = "*"
+gspread = "*"
 
 
 [dev-packages]
